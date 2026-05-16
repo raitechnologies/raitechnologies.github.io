@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RaiTech - Digital transformation and enterprise technology solutions by Rai Faisal. Specializing in system architecture, cybersecurity, cloud migration, and AI integration.">
+    <meta name="keywords" content="IT professional, digital transformation, cybersecurity, system architecture, cloud computing, RaiTech">
+    <meta name="author" content="Rai Faisal">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://raitech.com">
+    <meta property="og:title" content="Rai Faisal | Founder of RaiTech">
+    <meta property="og:description" content="Digital transformation and enterprise technology solutions">
+    <meta property="og:image" content="https://raitech.com/assets/imges/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@raifaisal">
+    <meta name="twitter:creator" content="@raifaisal">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://raitech.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Outfit:wght@400;900&display=swap" rel="stylesheet">
+    
+    <!-- Local Vendors -->
+    <script src="vendors/js/gsap.min.js"></script>
+    <link rel="stylesheet" href="vendors/css/aos.min.css">
+    <link rel="stylesheet" href="vendors/css/tailwind.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="src/styles/main.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RaiTech",
+      "url": "https://raitech.com",
+      "logo": "https://raitech.com/assets/imges/logo.png",
+      "description": "RaiTech - Digital transformation and enterprise technology solutions",
+      "founder": {
+        "@type": "Person",
+        "name": "Rai Faisal"
+      },
+      "contact": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "info@raitech.com"
+      }
+    }
+    </script>
+    
+    <title>Rai Faisal | Founder of RaiTech - Digital Transformation Expert</title>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+        .text-danger-red { color: #ff0000; }
+        .bg-danger-red { background-color: #ff0000; }
+        .border-danger-red { border-color: #ff0000; }
+        .shadow-red { box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); }
+        .glow-hover:hover { box-shadow: 0 0 30px rgba(255, 0, 0, 0.6); }
+        
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #000; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #ff0000; border-radius: 10px; }
+
+        /* Page transition overlay */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: black;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader-hide {
+            animation: fadeOut 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; pointer-events: none; }
+        }
+
+        .section-indicator {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #444;
+            margin: 10px 0;
+            border-radius: 50%;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .dot.active {
+            background: #ff0000;
+            transform: scale(1.5);
+            box-shadow: 0 0 10px #ff0000;
+        }
+    </style>
+</head>
+<body class="custom-scrollbar">
+
+    <!-- Page Loader -->
+    <div id="loader">
+        <div class="text-center">
+            <div class="w-16 h-16 border-4 border-danger-red border-t-transparent rounded-full animate-spin mb-4"></div>
+            <h2 class="text-xl font-bold tracking-widest uppercase">RaiTech</h2>
+        </div>
+    </div>
+
+    <!-- Section Indicator (Desktop Only) -->
+    <div class="section-indicator hidden lg:block">
+        <!-- Dots generated by JS -->
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar-container"></nav>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-container"></footer>
+
+    <!-- Scripts -->
+    <!-- Component Scripts -->
+    <script src="src/components/Router.js"></script>
+    <script src="src/components/Navbar.js"></script>
+    <script src="src/components/Footer.js"></script>
+    <script src="src/components/ContactForm.js"></script>
+    <script src="src/components/ProjectGallery.js"></script>
+    <script src="src/components/MarkdownParser.js"></script>
+    <script src="src/components/BlogSystem.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="vendors/js/aos.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="vendors/js/lucide.min.js"></script>
+
+    <!-- Main App Script -->
+    <script>
+        /**
+         * RaiTech Portfolio - Main Application
+         */
+
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+        });
+
+        function initializeApp() {
+            // Initialize Navbar
+            const navbar = new Navbar();
+            document.getElementById('navbar-container').innerHTML = navbar.render();
+            navbar.attachEvents();
+
+            // Initialize Footer
+            const footer = new Footer();
+            document.getElementById('footer-container').innerHTML = footer.render();
+
+            // Initialize Blog System
+            const blogSystem = new BlogSystem();
+
+            // Initialize Project Gallery Data
+            const projectsData = [
+                {
+                    id: 'quantum-core',
+                    title: 'Quantum Core Security',
+                    category: 'Security',
+                    image: 'assets/imges/mine.jpeg',
+                    description: 'Enterprise network security solution',
+                    fullDescription: 'A comprehensive enterprise security architecture protecting against evolving threats.',
+                    tags: ['Security', 'Enterprise', 'Architecture'],
+                    link: '#'
+                },
+                {
+                    id: 'omnisight-ai',
+                    title: 'OmniSight AI',
+                    category: 'AI & ML',
+                    image: 'assets/imges/mine.jpeg',
+                    description: 'Business analytics with custom ML',
+                    fullDescription: 'Advanced AI-powered analytics platform for enterprise decision making.',
+                    tags: ['AI', 'Analytics', 'ML'],
+                    link: '#'
+                },
+                {
+                    id: 'sentinel-vault',
+                    title: 'Sentinel Vault',
+                    category: 'Security',
+                    image: 'assets/imges/mine.jpeg',
+                    description: 'Data protection and cryptography',
+                    fullDescription: 'Enterprise-grade data protection and encryption systems.',
+                    tags: ['Security', 'Data', 'Crypto'],
+                    link: '#'
+                },
+                {
+                    id: 'stratus-shift',
+                    title: 'Stratus Shift',
+                    category: 'Cloud',
+                    image: 'assets/imges/mine.jpeg',
+                    description: 'Cloud migration and CI/CD',
+                    fullDescription: 'Seamless cloud migration with automated DevOps pipelines.',
+                    tags: ['Cloud', 'DevOps', 'CI/CD'],
+                    link: '#'
+                },
+                {
+                    id: 'aether-os',
+                    title: 'Aether OS',
+                    category: 'Development',
+                    image: 'assets/imges/mine.jpeg',
+                    description: 'UI/UX design and full-stack',
+                    fullDescription: 'Complete full-stack platform with modern UI/UX design.',
+                    tags: ['Full-Stack', 'UI/UX', 'Development'],
+                    link: '#'
+                }
+            ];
+
+            // Define Routes
+            const router = Router.getInstance();
+
+            // Home Page
+            router.register('/', () => renderHomePage(projectsData, blogSystem));
+
+            // Blog Page
+            router.register('/blog', () => blogSystem.renderBlogList());
+
+            // Blog Post
+            router.register('/blog/post/:id', (id) => blogSystem.renderBlogPost(id));
+
+            // Career Page
+            router.register('/career', async () => {
+                const response = await fetch('src/pages/Career.html');
+                return response.text();
+            });
+
+            // Goals Page
+            router.register('/goals', async () => {
+                const response = await fetch('src/pages/Goals.html');
+                return response.text();
+            });
+
+            // Privacy Policy
+            router.register('/privacy-policy', async () => {
+                const response = await fetch('src/pages/PrivacyPolicy.md');
+                const markdown = await response.text();
+                return `<section class="min-h-screen bg-black px-8 py-20">
+                    <div class="max-w-3xl mx-auto">
+                        <a href="/" class="text-danger-red hover:underline font-bold mb-8 inline-block">← Back Home</a>
+                        <div class="prose prose-invert max-w-none">${MarkdownParser.parse(markdown)}</div>
+                    </div>
+                </section>`;
+            });
+
+            // Terms & Conditions
+            router.register('/terms', async () => {
+                const response = await fetch('src/pages/Terms.md');
+                const markdown = await response.text();
+                return `<section class="min-h-screen bg-black px-8 py-20">
+                    <div class="max-w-3xl mx-auto">
+                        <a href="/" class="text-danger-red hover:underline font-bold mb-8 inline-block">← Back Home</a>
+                        <div class="prose prose-invert max-w-none">${MarkdownParser.parse(markdown)}</div>
+                    </div>
+                </section>`;
+            });
+
+            // Load initial page
+            const initialPath = window.location.pathname === '/' ? '/' : window.location.pathname;
+            router.navigate(initialPath);
+
+            // Hide loader after initial load
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                if (loader) {
+                    loader.classList.add('loader-hide');
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 500);
+                }
+            }, 1000);
+
+            // Initialize AOS
+            if (window.AOS) {
+                AOS.init({
+                    duration: 1000,
+                    once: true,
+                    offset: 100
+                });
+            }
+
+            // Initialize Lucide Icons
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        }
+
+        function renderHomePage(projectsData, blogSystem) {
+            const projectGallery = new ProjectGallery(projectsData);
+            
+            return `
+                <!-- PAGE 1: COVER -->
+                <section id="cover" class="h-screen flex items-center justify-center relative overflow-hidden bg-black">
+                    <div class="absolute inset-0 opacity-20 pointer-events-none">
+                        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-900/20 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="text-center z-10 px-4" data-aos="zoom-out" data-aos-duration="1500">
+                        <h1 class="text-6xl md:text-9xl font-black mb-4 tracking-tighter">RAI<span class="text-danger-red">TECH</span></h1>
+                        <p class="text-lg md:text-2xl font-light tracking-[0.5em] uppercase text-gray-400">Innovation Redefined</p>
+                        <div class="mt-12 animate-bounce flex flex-col items-center">
+                            <span class="text-xs uppercase tracking-widest mb-2 opacity-50">Scroll to Explore</span>
+                            <i data-lucide="chevron-down" class="text-danger-red"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PAGE 2: ABOUT ME -->
+                <section id="about" class="min-h-screen flex items-center bg-zinc-950 px-8 py-20">
+                    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                        <div data-aos="fade-right">
+                            <img src="assets/imges/mine.jpeg" alt="Rai Faisal" class="rounded-2xl border-l-8 border-danger-red shadow-2xl">
+                        </div>
+                        <div data-aos="fade-left">
+                            <h2 class="text-danger-red font-bold uppercase tracking-widest mb-4">Founder of RaiTech</h2>
+                            <h3 class="text-4xl md:text-6xl font-bold mb-6">Bridging Vision & <span class="text-danger-red">Technology</span>.</h3>
+                            <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                                I am Rai Faisal, an IT professional dedicated to crafting digital excellence. With a background in complex system architecture and a passion for disruptive innovation, RaiTech was born to transform businesses through future-ready solutions.
+                            </p>
+                            <div class="flex gap-4">
+                                <div class="p-4 border border-zinc-800 rounded-xl text-center">
+                                    <h4 class="text-2xl font-bold text-danger-red">10+</h4>
+                                    <p class="text-xs text-gray-500 uppercase">Years Experience</p>
+                                </div>
+                                <div class="p-4 border border-zinc-800 rounded-xl text-center">
+                                    <h4 class="text-2xl font-bold text-danger-red">200+</h4>
+                                    <p class="text-xs text-gray-500 uppercase">Projects Delivered</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SERVICES SECTION (Condensed) -->
+                <section id="services" class="min-h-screen bg-zinc-950 px-8 py-20">
+                    <div class="max-w-6xl mx-auto">
+                        <h2 class="text-4xl font-black mb-16 text-center">Featured <span class="text-danger-red">Services</span></h2>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="p-8 border border-zinc-800 rounded-3xl hover:bg-zinc-900 transition-all group" data-aos="flip-left">
+                                <i data-lucide="shield-check" class="w-12 h-12 text-danger-red mb-6"></i>
+                                <h3 class="text-2xl font-bold mb-4">Enterprise Security</h3>
+                                <p class="text-gray-500">Robust protection layers for your digital assets.</p>
+                            </div>
+                            <div class="p-8 border border-zinc-800 rounded-3xl hover:bg-zinc-900 transition-all group" data-aos="flip-left" data-aos-delay="100">
+                                <i data-lucide="cloud" class="w-12 h-12 text-danger-red mb-6"></i>
+                                <h3 class="text-2xl font-bold mb-4">Cloud Migration</h3>
+                                <p class="text-gray-500">Seamless transition to scalable infrastructures.</p>
+                            </div>
+                            <div class="p-8 border border-zinc-800 rounded-3xl hover:bg-zinc-900 transition-all group" data-aos="flip-left" data-aos-delay="200">
+                                <i data-lucide="cpu" class="w-12 h-12 text-danger-red mb-6"></i>
+                                <h3 class="text-2xl font-bold mb-4">Custom AI Models</h3>
+                                <p class="text-gray-500">Tailored machine learning solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PROJECT GALLERY -->
+                ${projectGallery.render()}
+
+                <!-- CONTACT SECTION -->
+                <section id="contact" class="min-h-screen bg-black px-8 py-20">
+                    <div class="max-w-3xl mx-auto">
+                        <h2 class="text-4xl font-black mb-4 text-center">Let's Work <span class="text-danger-red">Together</span></h2>
+                        <p class="text-gray-400 text-center mb-12">Have an idea or project in mind? Get in touch and let's create something amazing.</p>
+                        ${new ContactForm().render()}
+                    </div>
+                </section>
+            `;
+        }
+
+        // Handle dynamic blog post routes
+        window.addEventListener('load', function() {
+            const path = window.location.pathname;
+            if (path.startsWith('/blog/post/')) {
+                const postId = path.split('/').pop();
+                const router = Router.getInstance();
+                router.navigate(`/blog/post/${postId}`);
+            }
+        });
+    </script>
+
+    <!-- Reinitialize components after navigation -->
+    <script>
+        const originalNavigate = Router.prototype.navigate;
+        Router.prototype.navigate = function(path) {
+            originalNavigate.call(this, path);
+            
+            // Reinitialize components after content load
+            setTimeout(() => {
+                const contactForm = new ContactForm();
+                const form = document.getElementById(contactForm.formId);
+                if (form) {
+                    contactForm.attachEvents();
+                }
+                
+                const projectGallery = new ProjectGallery();
+                const gallery = document.getElementById(projectGallery.galleryId);
+                if (gallery) {
+                    projectGallery.attachEvents();
+                }
+                
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+            }, 100);
+        };
+    </script>
+
+</body>
+</html>

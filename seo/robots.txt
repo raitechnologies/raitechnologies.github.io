@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /projects/
+Allow: /services/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Sitemaps
+Sitemap: https://raitech.com/sitemap.xml
+Sitemap: https://raitech.com/sitemap-blog.xml
+
+# Crawl Delay
+Crawl-delay: 1
+
+# Request Rate
+Request-rate: 30/1m

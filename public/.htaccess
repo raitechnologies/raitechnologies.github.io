@@ -1,0 +1,71 @@
+<!-- 
+  Router Configuration File (.htaccess)
+  For Apache servers - enables client-side routing for SPA
+  Place this in your public_html or web root directory
+-->
+
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Set the base URL
+  RewriteBase /
+  
+  # Allow direct access to files and directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  
+  # Route all other requests to index.html
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
+# Compress text responses
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# Set proper caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # HTML files - don't cache
+  ExpiresByType text/html "max-age=0, must-revalidate"
+  
+  # Images - cache for 1 year
+  ExpiresByType image/jpeg "max-age=31536000"
+  ExpiresByType image/png "max-age=31536000"
+  ExpiresByType image/gif "max-age=31536000"
+  
+  # CSS and JS - cache for 1 year
+  ExpiresByType text/css "max-age=31536000"
+  ExpiresByType application/javascript "max-age=31536000"
+  
+  # Default
+  ExpiresDefault "max-age=3600"
+</IfModule>
+
+# Add MIME types
+<IfModule mod_mime.c>
+  AddType application/javascript js
+  AddType application/json json
+  AddType image/svg+xml svg
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+  # Enable HTTPS
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  
+  # Prevent clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+  
+  # Prevent MIME sniffing
+  Header always set X-Content-Type-Options "nosniff"
+  
+  # Enable XSS protection
+  Header always set X-XSS-Protection "1; mode=block"
+  
+  # Referrer Policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

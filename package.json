@@ -1,0 +1,48 @@
+{
+  "name": "raitech-portfolio",
+  "version": "2.0.0",
+  "description": "RaiTech - Professional portfolio website for Rai Faisal, IT Professional and founder of RaiTech. Featuring dynamic pages, blog system, project gallery, and SEO optimization.",
+  "homepage": "https://raitech_global.github.io",
+  "author": {
+    "name": "Rai Faisal",
+    "email": "info@raitech.com",
+    "url": "https://raitech.com"
+  },
+  "keywords": [
+    "portfolio",
+    "IT professional",
+    "digital transformation",
+    "cybersecurity",
+    "system architecture",
+    "RaiTech"
+  ],
+  "scripts": {
+    "start": "python -m http.server 8000 --directory .",
+    "dev": "python -m http.server 8000 --directory .",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "echo 'CSS minification - implement with cssnano or similar'",
+    "minify-js": "echo 'JS minification - implement with terser or similar'",
+    "deploy": "npm run build && git add . && git commit -m 'Production build' && git push origin main",
+    "test": "echo 'Add your testing setup here'",
+    "lint": "echo 'Add your linting setup here'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raitech_global/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raitech_global/portfolio/issues"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "private": true
+}

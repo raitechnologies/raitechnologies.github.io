@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rai Faisal",
+  "url": "https://raitech.com",
+  "jobTitle": "Founder & CEO of RaiTech",
+  "image": "https://raitech.com/assets/imges/mine.jpeg",
+  "description": "IT Professional and founder of RaiTech. Expert in system architecture, cybersecurity, cloud computing, and digital transformation with 10+ years of experience.",
+  "sameAs": [
+    "https://linkedin.com/in/raifaisal",
+    "https://twitter.com/raifaisal",
+    "https://github.com/raifaisal"
+  ],
+  "knowsAbout": [
+    "Information Technology",
+    "Cybersecurity",
+    "System Architecture",
+    "Cloud Computing",
+    "Artificial Intelligence",
+    "Enterprise Solutions"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "RaiTech"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-0100",
+    "contactType": "Professional Inquiry",
+    "email": "info@raitech.com"
+  }
+}

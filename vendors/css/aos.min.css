@@ -1,0 +1,46 @@
+/* AOS (Animate On Scroll) Styles */
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes flipLeft {
+  from { opacity: 0; transform: rotateY(90deg); }
+  to { opacity: 1; transform: rotateY(0); }
+}
+
+[data-aos~="slide-up"] { animation: slideUp 1s ease-out; }
+[data-aos~="slide-down"] { animation: slideDown 1s ease-out; }
+[data-aos~="slide-left"], [data-aos~="fade-left"] { animation: slideLeft 1s ease-out; }
+[data-aos~="slide-right"], [data-aos~="fade-right"] { animation: slideRight 1s ease-out; }
+[data-aos~="fade-up"] { animation: slideUp 1s ease-out; }
+[data-aos~="fade-in"] { animation: fadeIn 1s ease-out; }
+[data-aos~="zoom-in"] { animation: zoomIn 1s ease-out; }
+[data-aos~="zoom-out"] { animation: zoomIn 1s ease-out reverse; }
+[data-aos~="flip-left"] { animation: flipLeft 1s ease-out; }

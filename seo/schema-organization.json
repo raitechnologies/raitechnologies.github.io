@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "RaiTech",
+  "alternateName": "Rai Faisal | RaiTech",
+  "url": "https://raitech.com",
+  "logo": "https://raitech.com/assets/imges/logo.png",
+  "description": "RaiTech - Digital transformation and enterprise technology solutions by Rai Faisal. Specializing in system architecture, cybersecurity, cloud migration, and AI integration.",
+  "sameAs": [
+    "https://linkedin.com/company/raitech",
+    "https://twitter.com/raitech",
+    "https://github.com/raifaisal"
+  ],
+  "contact": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-0100",
+    "contactType": "Customer Service",
+    "email": "info@raitech.com"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Rai Faisal",
+    "jobTitle": "Founder & CEO",
+    "url": "https://raitech.com",
+    "sameAs": [
+      "https://linkedin.com/in/raifaisal",
+      "https://twitter.com/raifaisal"
+    ]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Your Address]",
+    "addressLocality": "[City]",
+    "addressRegion": "[State/Province]",
+    "postalCode": "[Postal Code]",
+    "addressCountry": "US"
+  },
+  "knowsAbout": [
+    "System Architecture",
+    "Cybersecurity",
+    "Cloud Computing",
+    "DevOps",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Full-Stack Development",
+    "Blockchain",
+    "IoT",
+    "Data Analytics"
+  ],
+  "award": [
+    "Industry Leading Security Solutions",
+    "Enterprise Technology Innovation Award"
+  ]
+}

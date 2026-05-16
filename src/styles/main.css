@@ -1,0 +1,419 @@
+/**
+ * Main Stylesheet for RaiTech Portfolio
+ * Base styles, animations, and utility classes
+ */
+
+:root {
+  --color-danger-red: #ff0000;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-zinc-900: #0f0f0f;
+  --color-zinc-950: #09090b;
+  --color-gray-400: #a1a1aa;
+  --color-gray-500: #71717a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-danger-red) var(--color-black);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-danger-red);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc0000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+}
+
+/* Utility Classes */
+.text-danger-red {
+  color: var(--color-danger-red);
+}
+
+.bg-danger-red {
+  background-color: var(--color-danger-red);
+}
+
+.border-danger-red {
+  border-color: var(--color-danger-red);
+}
+
+.shadow-red {
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+.glow-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+  transform: scale(1.02);
+}
+
+/* Loading Animation */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--color-black);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Scroll Spy Dots */
+.section-indicator {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #444;
+  margin: 15px 0;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.dot:hover {
+  background: var(--color-danger-red);
+  transform: scale(1.3);
+}
+
+.dot.active {
+  background: var(--color-danger-red);
+  transform: scale(1.5);
+  box-shadow: 0 0 15px var(--color-danger-red);
+}
+
+/* Form Styles */
+input, textarea, select {
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--color-danger-red) !important;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+}
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Card Styles */
+.card {
+  background: linear-gradient(135deg, #0f0f0f 0%, #09090b 100%);
+  border: 1px solid #27272a;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--color-danger-red);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Prose Styles */
+.prose-invert h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+}
+
+.prose-invert h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+}
+
+.prose-invert h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.prose-invert p {
+  margin-bottom: 1rem;
+  color: var(--color-gray-400);
+  line-height: 1.8;
+}
+
+.prose-invert code {
+  background-color: #18181b;
+  border: 1px solid #27272a;
+}
+
+.prose-invert pre {
+  background-color: #09090b;
+  border: 1px solid #27272a;
+  overflow-x: auto;
+}
+
+.prose-invert a {
+  color: var(--color-danger-red);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.prose-invert a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-indicator {
+    display: none !important;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark Mode Gradients */
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.from-black {
+  --tw-gradient-from: var(--color-black);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
+}
+
+.to-transparent {
+  --tw-gradient-to: transparent;
+}
+
+/* Utility Spacing */
+.container {
+  max-width: 6rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Opacity and Display */
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Z-index utilities */
+.z-10 {
+  z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-9999 {
+  z-index: 9999;
+}
+
+/* Flexbox utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+}
+
+/* Overflow */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+/* Position utilities */
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.inset-0 {
+  inset: 0;
+}
+
+/* Transform utilities */
+.scale-110 {
+  transform: scale(1.1);
+}
+
+.translate-y-0 {
+  transform: translateY(0);
+}
+
+/* Cursor */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
