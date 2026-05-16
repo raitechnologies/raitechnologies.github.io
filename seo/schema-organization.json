@@ -3,8 +3,8 @@
   "@type": "Organization",
   "name": "RaiTech",
   "alternateName": "Rai Faisal | RaiTech",
-  "url": "https://raitech.com",
-  "logo": "https://raitech.com/assets/imges/logo.png",
+  "url": "https://raitechnologies.github.io/",
+  "logo": "https://raitechnologies.github.io//assets/imges/logo.png",
   "description": "RaiTech - Digital transformation and enterprise technology solutions by Rai Faisal. Specializing in system architecture, cybersecurity, cloud migration, and AI integration.",
   "sameAs": [
     "https://linkedin.com/company/raitech",
@@ -21,7 +21,7 @@
     "@type": "Person",
     "name": "Rai Faisal",
     "jobTitle": "Founder & CEO",
-    "url": "https://raitech.com",
+    "url": "https://raitechnologies.github.io/",
     "sameAs": [
       "https://linkedin.com/in/raifaisal",
       "https://twitter.com/raifaisal"

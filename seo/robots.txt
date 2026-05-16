@@ -8,8 +8,8 @@ Disallow: /api/
 Disallow: /private/
 
 # Sitemaps
-Sitemap: https://raitech.com/sitemap.xml
-Sitemap: https://raitech.com/sitemap-blog.xml
+Sitemap: https://raitechnologies.github.io//sitemap.xml
+Sitemap: https://raitechnologies.github.io//sitemap-blog.xml
 
 # Crawl Delay
 Crawl-delay: 1

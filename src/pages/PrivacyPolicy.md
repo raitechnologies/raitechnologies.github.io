@@ -4,7 +4,7 @@
 
 ## Introduction
 
-RaiTech ("we," "us," "our," or "Company") operates the [raitech.com](https://raitech.com) website and its associated applications and services (collectively, the "Service").
+RaiTech ("we," "us," "our," or "Company") operates the [raitech.com](https://raitechnologies.github.io/) website and its associated applications and services (collectively, the "Service").
 
 This Privacy Policy explains our practices concerning the collection, use, and disclosure of your information through our Service.
 

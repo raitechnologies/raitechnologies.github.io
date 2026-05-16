@@ -244,7 +244,7 @@ done
 ### Google Search Console
 1. Visit https://search.google.com/search-console
 2. Add property (your domain)
-3. Submit sitemap: https://raitech.com/seo/sitemap.xml
+3. Submit sitemap: https://raitechnologies.github.io//seo/sitemap.xml
 4. Monitor search appearance
 
 ### Google Analytics 4

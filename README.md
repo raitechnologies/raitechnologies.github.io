@@ -1,6 +1,6 @@
 # RaiTech Portfolio - Rai Faisal
 
-**Status:** Professional Portfolio | **Version:** 2.0 | **Live:** [raitech.com](https://raitech.com)
+**Status:** Professional Portfolio | **Version:** 2.0 | **Live:** [raitech.com](https://raitechnologies.github.io/)
 
 A modern, fully-responsive portfolio website for **Rai Faisal**, IT Professional and founder of **RaiTech**. Built with vanilla JavaScript, responsive design, and enterprise-grade SEO optimization.
 
