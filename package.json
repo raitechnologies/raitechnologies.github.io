@@ -2,7 +2,7 @@
   "name": "raitech-portfolio",
   "version": "2.0.0",
   "description": "RaiTech - Professional portfolio website for Rai Faisal, IT Professional and founder of RaiTech. Featuring dynamic pages, blog system, project gallery, and SEO optimization.",
-  "homepage": "https://raitech_global.github.io",
+  "homepage": "https://raitechnologies.github.io",
   "author": {
     "name": "Rai Faisal",
     "email": "info@raitech.com",
@@ -28,10 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/raitech_global/portfolio.git"
+    "url": "https://github.com/raitechnologies/portfolio.git"
   },
   "bugs": {
-    "url": "https://github.com/raitech_global/portfolio/issues"
+    "url": "https://github.com/raitechnologies/portfolio/issues"
   },
   "dependencies": {
     "gsap": "^3.12.2"

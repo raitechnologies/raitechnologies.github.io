@@ -92,7 +92,7 @@ portfolio/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/raitech_global/portfolio.git
+git clone https://github.com/raitechnologies/portfolio.git
 cd portfolio
 ```
 
@@ -158,12 +158,12 @@ This runs the build pipeline and pushes to GitHub.
 
 1. **Configure GitHub repository**
 ```bash
-git remote add origin https://github.com/raitech_global/portfolio.git
+git remote add origin https://github.com/raitechnologies/portfolio.git
 ```
 
 2. **Update package.json homepage**
 ```json
-"homepage": "https://raitech_global.github.io"
+"homepage": "https://raitechnologies.github.io"
 ```
 
 3. **Deploy**

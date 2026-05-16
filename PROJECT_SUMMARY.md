@@ -254,7 +254,7 @@ git commit -m "RaiTech Portfolio v2.0"
 git branch -M main
 
 # 2. Add remote
-git remote add origin https://github.com/raitech_global/portfolio.git
+git remote add origin https://github.com/raitechnologies/portfolio.git
 
 # 3. Push to GitHub
 git push -u origin main
@@ -262,7 +262,7 @@ git push -u origin main
 # 4. Enable Pages in Settings → Pages → Deploy from branch: main
 
 # 5. Add custom domain (optional)
-# DNS: CNAME @ → raitech_global.github.io
+# DNS: CNAME @ → raitechnologies.github.io
 ```
 
 ### Vercel (One-Click)

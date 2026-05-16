@@ -23,7 +23,7 @@ git init
 git add .
 git commit -m "Initial commit: RaiTech Portfolio v2.0"
 git branch -M main
-git remote add origin https://github.com/raitech_global/portfolio.git
+git remote add origin https://github.com/raitechnologies/portfolio.git
 git push -u origin main
 ```
 
@@ -37,7 +37,7 @@ git push -u origin main
 3. **Update package.json**
 ```json
 {
-  "homepage": "https://raitech_global.github.io"
+  "homepage": "https://raitechnologies.github.io"
 }
 ```
 
@@ -51,7 +51,7 @@ git push -u origin main
 ```
 Type: CNAME
 Name: @
-Value: raitech_global.github.io
+Value: raitechnologies.github.io
 TTL: 3600
 ```
 
@@ -59,7 +59,7 @@ Or for www subdomain:
 ```
 Type: CNAME
 Name: www
-Value: raitech_global.github.io
+Value: raitechnologies.github.io
 TTL: 3600
 ```
 
@@ -156,7 +156,7 @@ ssh user@yourdomain.com
 cd public_html
 
 # Clone repository
-git clone https://github.com/raitech_global/portfolio.git .
+git clone https://github.com/raitechnologies/portfolio.git .
 
 # Install dependencies (if using build tools)
 npm install
@@ -200,8 +200,8 @@ For domain `raitech.com`:
 
 ```
 // For GitHub Pages
-@ CNAME raitech_global.github.io
-www CNAME raitech_global.github.io
+@ CNAME raitechnologies.github.io
+www CNAME raitechnologies.github.io
 
 // For MX Records (if using email)
 @ MX 10 mail.yourmailprovider.com
